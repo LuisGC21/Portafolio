@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">PREPARACION ACADEMICA</a></li>
+                    <li><a href="doc/CV_GressCárdenasLuisAngel.pdf" download target="_blank">DESCARGAR CV</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <h1>Luis Angel Gress Cárdenas</h1>
+            <h2>Licenciado en Tecnologias de la Información</h2>
+            <br>
+            <div class="contenedor-img">
+                <img src="img/foto.JPG" alt="">
+            </div>
+          
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Pasante de Lic. Tecnologías de la Información</h2>
+            <p>
+                Egresado de la Universidad Autónoma del Estado de Hidalgo, Escuela superior de Tizayuca con conocimientos en programación en los lenguajes, Java, C#, PHP, buen manejo con etiquetas HTML y desarrollo de interfaces con CSS, y JavaScript, conocimientos de Diagramas UML y Base de Datos (SQL) 
+            </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Preparacion Academica (2019- 2023)</h2>
+            <div class="parrafo-curriculum">
+                <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i> Universidad Autónoma del Estado de Hidalgo</h3>
+                <p>Durante mi tiempo escolar e tenido la oportunidad de desarrollar algunos proyectos que han sido complejos, de los cuales rescato:</p>
+            </div>
+            <div class="fila">
+                <div class="col izquierda">
+                    <div class="item izq">
+                        <h4>Tienda de ropa</h4>
+                        <span class="casa">IDE: Visual Studio Professional 2019</span>
+                        <span class="fecha">Tiempo de Desarrollo: 1 mes</span>
+                        <p>Punto de venta desarrollado en C# para Tienda de Ropa, creada en Visual Studio 2019 basado un Modelo Vista Controlador, realizando conexion con base de datos creada en SQL Server</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Ventas por Catalogo</h4>
+                        <span class="casa">Editor de Texto: Visual Studio Code</span>
+                        <span class="fecha">Tiempo de Desarrollo: 3 Semanas</span>
+                        <p>Aplicación Web Progresiva para ventas por catálogo desarrollado con HTML, CSS, Bootstrap, JavaScript, SweeetAlert, haciendo uso de pouchDB para almacenar Datos</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Plataforma Digital</h4>
+                        <span class="casa">Editor de Texto: Visual Studio Code</span>
+                        <span class="fecha">Tiempo de Desarrollo: 2 meses</span>
+                        <p>Plataforma Digital desarrollada con PHP, HTML, JavaScript, CSS y Bootstrap, usando el servidor Xampp para realizar pruebas y conexion con PHPMyAdmin para almacenar datos</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col derecha">
+                    <br><br>
+                    <div class="item der">
+                        <h4>Tienda de Reposteria</h4>
+                        <span class="casa">IDE: Visual Studio Professional 2019 <br> Editor de Texto: Visual Studio Code</span>
+                        <span class="fecha">Tiempo de Desarrollo: 2 meses</span>
+                        <p>Punto de Venta desarrollado en C# para una Reposteria, creada en Visual Studio 2019 basado en un Modelo Vista Controlador, junto con una Pagina Web desarrollada en HTML, CSS y JavaScript</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Compra de Boletos Cine</h4>
+                        <span class="casa"> Editor de Texto: Visual Studio Code</span>
+                        <span class="fecha">Tiempo de Desarrollo: 2 Semanas</span>
+                        <p>Aplicación Web Progresiva para un compra y venta de Voletos de un cine usando arreglos en JavaScript para almacenar datos, desarrollada en HTML, CSS, JavaScript, Bootstrap y SweetAlert</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Videojuego</h4>
+                        <span class="casa">Motor de Videojuego: Unity 3D</span>
+                        <span class="fecha">Tiempo de Desarrollo: 6 meses</span>
+                        <p>Videojuego como Herramienta Educativa de Aritmetica Basica para niños de primaria, desarrollado en Unity 3D usando animaciones creadas en Blednder y realizando conexión con una base de datos en PHPMyAdmin</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Habilidades</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Lenguajes</h3>
+                    <div class="skill">
+                        <br><br>
+                        <span>HTML</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>SQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>C#</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>PHP</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="main">
+            <p id="texto"></p>
+            <div class="navigation active">
+            <span style="--i:0;--x:-1;--y:0;" onmouseover="muestraTexto('telefono')">
+                <ion-icon name="call-outline"></ion-icon>
+            </span>
+            <span style="--i:1;--x:1;--y:0;" onmouseover="muestraTexto('años')">
+                <ion-icon name="calendar-number-outline" ></ion-icon>
+            </span>
+            <span style="--i:2;--x:1;--y:-1;" onmouseover="muestraTexto('domicilio')">
+                <ion-icon name="home-outline" ></ion-icon>
+            </span>
+            <span style="--i:3;--x:0;--y:-1;" onmouseover="muestraTexto('linkedin')">
+                <ion-icon name="logo-linkedin" ></ion-icon>
+            </span>
+            <span style="--i:4;--x:-1;--y:-1;" onmouseover="muestraTexto('correo')">
+                <ion-icon name="at-outline" ></ion-icon>
+            </span>
+            </div>
+            <div class="close"><ion-icon name="close-outline"></ion-icon></div>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"> </script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let navigation = document.querySelector('.navigation');
+        let close = document.querySelector('.close');
+        let txt = document.getElementById('texto');
+
+        navigation.onclick = function(){
+            txt.style = "display: block;"
+            navigation.classList.add('active');
+        }
+        close.onclick = function(){
+            txt.style = "display: none;";
+            txt.innerHTML = '';
+            navigation.classList.remove('active');
+        }
+        function muestraTexto(valor){
+            txt.innerHTML = '';
+            valor == 'telefono'?txt.innerHTML = '77-9137-8549':
+            valor == 'años'?txt.innerHTML = '21 años':
+            valor == 'domicilio'?txt.innerHTML = 'Tizayuca, Hidalgo':
+            valor == 'linkedin'?txt.innerHTML = '<a href="http://www.linkedin.com/in/luis-angel-gress-cárdenas-2068b1267" target="_blank">Luis Angel Gress Cárdenas</a>':
+            valor == 'correo'?txt.innerHTML = 'gresscardenasla@gmail.com': console.log('Error');
+        }
+
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
