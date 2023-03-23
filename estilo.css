@@ -978,7 +978,8 @@ body {
   }
   
   .refCard {
-    margin-left: 100px;
+    margin-left: 265px;
+    margin-bottom: 20px;
     background: var(--color-secundario);
     width: var(--card-width);
     height: var(--card-height);
