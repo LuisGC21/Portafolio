@@ -1,4 +1,3 @@
-
 let navigation = document.querySelector('.navigation');
 let close = document.querySelector('.close');
 let años = document.getElementById('años');
@@ -47,10 +46,19 @@ function adjustSlider(e) {
 	L.forEach((light, i) => {
 		if (light < 0) light = 0;   
 		body.style.setProperty(`--l${i + 1}`, `hsl(350, 80%,${light}%)`);
+		document.getElementById('inicio').style = `
+			background-image: linear-gradient(
+				var(--rotate),
+				hsl(193, 100%, ${light}%),
+				hsl(225, 75%, ${light}%) 43%,
+				hsl(264, 100%, ${light}%)
+			);
+		`;
+		light < 40?document.getElementById('h1').style.setProperty("color","white"):document.getElementById('h1').style.setProperty("color","black");
 		for(i = 0; i < cajaDer.length; i++) cajaDer.item(i).style.setProperty("background-color", `hsl(207, 11%, ${light}%)`);
 		for(i = 0; i < cajaIzq.length; i++) cajaIzq.item(i).style.setProperty("background-color", `hsl(207, 11%, ${light}%)`);
-		for(i = 0; i < p.length; i++) light > 50?p.item(i).style.setProperty("color", "black"):p.item(i).style.setProperty("color", "white");
-		for(i = 0; i < span.length; i++) light > 50?span.item(i).style.setProperty("color", "black") :span.item(i).style.setProperty("color", "white");
+		for(i = 0; i < p.length; i++) light > 40?p.item(i).style.setProperty("color", "black"):p.item(i).style.setProperty("color", "white");
+		for(i = 0; i < span.length; i++) light > 40?span.item(i).style.setProperty("color", "black") :span.item(i).style.setProperty("color", "white");
 	});
 	// update the thumb icon hue
 	body.style.setProperty(`--p`, `hsl(${thumbHSL})`);
@@ -113,10 +121,4 @@ $.each(textArr, function(i, v){
   if(v == ' '){$('.text').append('<span class="space"></span>');}
   $('.text').append('<span>'+v+'</span>');
 })
-// CardRefrencias
-function opacidad(valor){
-	valor == 1?document.getElementById('dani').style = "opacity: 0.5;":
-	valor == 2?document.getElementById('mau').style = "opacity: 0.5;":
- 	document.getElementById('dani').style = "opacity: 1;", document.getElementById('mau').style = "opacity: 1;"
-}
 
