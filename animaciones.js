@@ -117,6 +117,6 @@ $.each(textArr, function(i, v){
 function opacidad(valor){
 	valor == 1?document.getElementById('dani').style = "opacity: 0.5;":
 	valor == 2?document.getElementById('mau').style = "opacity: 0.5;":
- 	document.getElementById('dani').style = "opacity: 1;";, document.getElementById('mau').style = "opacity: 1;"
+ 	document.getElementById('dani').style = "opacity: 1;", document.getElementById('mau').style = "opacity: 1;"
 }
 
