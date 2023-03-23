@@ -26,17 +26,30 @@
             </div>
         </header>
     </div>
-
+    <!-- SECCION BRILLO -->
+    <form>
+        <label for="brightness">Brillo</label>
+        <input type="range" id="brightness" name="brightness" min="1" max="100" value="100">
+    </form>
     <!-- SECCION INICIO -->
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
-            <h1>Luis Angel Gress Cárdenas</h1>
+            <h1 id="h1"><div class="text">Luis Angel Gress Cárdenas</div></h1><br><br>
             <h2>Licenciado en Tecnologias de la Información</h2>
             <br>
-            <div class="contenedor-img">
-                <img src="img/foto.jpg" alt="">
+            <div class="wrap">
+                <div class="card-shadow"></div>
+                <div class="card">
+                    <div class="contenedor-img">
+                        <img src="img/foto.jpg" alt="">
+                    </div>
+                    <div class="card-front">
+                        <!-- <div class="card-title">3D perspective title</div>
+                        <div class="card-subtitle">3D perspective subtitle</div> -->
+                        <div class="card-shine"></div>
+                    </div>
+                </div>
             </div>
-          
         </div>
     </section>
 
@@ -45,7 +58,7 @@
         <div class="contenido-seccion">
             <h2>Pasante de Lic. Tecnologías de la Información</h2>
             <p>
-                Egresado de la Universidad Autónoma del Estado de Hidalgo, Escuela superior de Tizayuca con conocimientos en programación en los lenguajes, Java, C#, PHP, buen manejo con etiquetas HTML y desarrollo de interfaces con CSS, y JavaScript, conocimientos de Diagramas UML y Base de Datos (SQL) 
+                Egresado de la Universidad Autónoma del Estado de Hidalgo, Escuela superior de Tizayuca con conocimientos en programación en los lenguajes, Java, C#, PHP, buen manejo con etiquetas HTML y desarrollo de interfaces con CSS, y JavaScript, conocimientos de Diagramas UML y Base de Datos (SQL)
             </p>
             </div>
         </div>
@@ -192,6 +205,24 @@
             </div>
         </div>
     </section>
+    <!-- REFERENCIAS -->
+    <div class="referencias">
+        <div class="refCard" id="refcard" onmouseover="opacidad('1')">
+            <img class="dani" id="dani" src="img/daniela.jpg" alt="daniela">
+            Daniela Alejandra Valencia Ramirez <br>
+            55-3892-0189 <br>
+            aleeval0806@gmail.com <br>
+            PTB en Informatica
+        </div>
+        <div class="refCard" id="refcard" onmouseover="opacidad('2')">
+            <img class="mau" id="mau" src="img/mauricio.jpg" alt="mauricio">
+            Mauricio Moedano<br>
+            77-1192-8207<br>
+            mauricio@gmail.com<br>
+            Tecnico en Mantenimiento 
+        </div>
+    </div>
+    
     <!-- footer -->
     <footer>
         <a href="#inicio" class="arriba">
@@ -200,53 +231,32 @@
         <div class="main">
             <p id="texto"></p>
             <div class="navigation active">
-            <span style="--i:0;--x:-1;--y:0;" onmouseover="muestraTexto('telefono')">
-                <ion-icon name="call-outline"></ion-icon>
-            </span>
-            <span style="--i:1;--x:1;--y:0;" onmouseover="muestraTexto('años')">
-                <ion-icon name="calendar-number-outline" ></ion-icon>
-            </span>
-            <span style="--i:2;--x:1;--y:-1;" onmouseover="muestraTexto('domicilio')">
-                <ion-icon name="home-outline" ></ion-icon>
-            </span>
-            <span style="--i:3;--x:0;--y:-1;" onmouseover="muestraTexto('linkedin')">
-                <ion-icon name="logo-linkedin" ></ion-icon>
-            </span>
-            <span style="--i:4;--x:-1;--y:-1;" onmouseover="muestraTexto('correo')">
-                <ion-icon name="at-outline" ></ion-icon>
-            </span>
+                <span style="--i:0;--x:-1;--y:0;">
+                    <a href="https://wa.me/7791378549" target="_blank"><ion-icon name="logo-whatsapp" onclick="limpiar()"></ion-icon></a>
+                </span>
+                <span id="años" style="--i:1;--x:1;--y:0;">
+                    <ion-icon name="calendar-number-outline"  onclick="limpiar()"></ion-icon>
+                </span>
+                <span style="--i:2;--x:1;--y:-1;">
+                    <a href="https://goo.gl/maps/KNStGqFphKyF9siQ9" target="_blank"><ion-icon name="home-outline"  onclick="limpiar()"></ion-icon></a>
+                </span>
+                <span style="--i:3;--x:0;--y:-1;">
+                    <a href="https://www.linkedin.com/in/luis-angel-gress-c%C3%A1rdenas-2068b1267" target="_blank"><ion-icon name="logo-linkedin"  onclick="limpiar()"></ion-icon></a>
+                </span>
+                <span style="--i:4;--x:-1;--y:-1;">
+                    <a href="mailto:gresscardenasla@gmail.com?Subject=Portafolio" target="_blank"><ion-icon name="at-outline" onclick="limpiar()"></ion-icon></a>
+                </span>
+                <span style="--i:5;--x:-0;--y:1;">
+                    <a href="https://github.com/LuisGC21" target="_blank"><ion-icon name="logo-github" onclick="limpiar()"></ion-icon></a>
+                </span>
             </div>
             <div class="close"><ion-icon name="close-outline"></ion-icon></div>
         </div>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"> </script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <script>
-        let navigation = document.querySelector('.navigation');
-        let close = document.querySelector('.close');
-        let txt = document.getElementById('texto');
-
-        navigation.onclick = function(){
-            txt.style = "display: block;"
-            navigation.classList.add('active');
-        }
-        close.onclick = function(){
-            txt.style = "display: none;";
-            txt.innerHTML = '';
-            navigation.classList.remove('active');
-        }
-        function muestraTexto(valor){
-            txt.innerHTML = '';
-            valor == 'telefono'?txt.innerHTML = '77-9137-8549':
-            valor == 'años'?txt.innerHTML = '21 años':
-            valor == 'domicilio'?txt.innerHTML = 'Tizayuca, Hidalgo':
-            valor == 'linkedin'?txt.innerHTML = '<a href="http://www.linkedin.com/in/luis-angel-gress-cárdenas-2068b1267" target="_blank">Luis Angel Gress Cárdenas</a>':
-            valor == 'correo'?txt.innerHTML = 'gresscardenasla@gmail.com': console.log('Error');
-        }
-
-
-    </script>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="animaciones.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

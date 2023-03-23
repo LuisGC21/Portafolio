@@ -1,6 +1,3 @@
-function descarga(){
-    
-}
 let menuVisible = false;
 //Función que oculta o muestra el menu
 function mostrarOcultarMenu(){
